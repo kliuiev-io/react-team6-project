@@ -29,11 +29,27 @@ export default function App() {
   //   },
   // ];
   return (
-    <div className="App">
+    (<div className="App">
       <h1>Hello Branch 1</h1>
       {CardList(products)}
       <h2>Start editing to see some magic happen!</h2>
       <h2>Blah-blah-blah</h2>
-    </div>
+    </div>)(
+      <div className="container">
+        <button type="button" className="button">
+          За рейтингом
+        </button>
+      </div>
+    ),
+    (
+      <div className="dropdown">
+        <ul>
+          <li>Від дешевих до дорогих</li>
+          <li>Від дорогих до дешевих</li>
+          <li>Новинки</li>
+          <li>За рейтингом</li>
+        </ul>
+      </div>
+    )
   );
 }
